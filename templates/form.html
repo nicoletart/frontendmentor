@@ -22,14 +22,14 @@
             font-size: 12px;
             margin-top:11px;
             padding: 8px 28px;
-            background-color: white;
+            background-color: grey;
             border: 1px solid black;
             border-radius: 30px;
             font-weight:bold;
         }
 
         #btn:hover{
-            background-color: #CACACA;
+            background-color: #white;
             font-weight:normal;
         }
 
@@ -120,7 +120,7 @@
                     <label for="fridge">Enter the items in your refrigerator with spaces in between:</label>
                     <input type="text" id="fridge" name="inventory" placeholder="Enter food items">
                     <div id = "cont" class="container">
-                        <button id = "btn" type="submit" onclick = "call(changeImage())">Submit</button>
+                        <button id = "btn" type="submit">Submit</button>
                     </div>
                 </form>
                 <p id= "fridge_items">Items in your fridge: {{  inv }}</p>
