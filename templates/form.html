@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
+
+        body{
+            background-color: #D3EEF0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #form{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .container{
+            display: block;
+            text-align: center;
+        }
+
+        #btn{
+            font-size: 12px;
+            margin-top:11px;
+            padding: 8px 28px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 30px;
+            font-weight:bold;
+        }
+
+        #btn:hover{
+            background-color: #CACACA;
+            font-weight:normal;
+        }
+
+        #fridges{
+
+            float: left;
+            width: 466px;
+            height: 720px;
+          }
+
+        #fridges:hover{
+            opacity: 80%;
+          }
+
+        .form-text{
+            align-items: center;
+            padding-top: 170px;
+            font-size: 27px;
+        }
+
+        #fridge_items{
+            margin-bottom :-20px;
+            
+        }
+
+        #randomizer{
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            padding-top: 10px;
+        }
+
+        #final_pic{
+            border : none;
+            max-width : 20%;
+            height: auto;
+            margin-left: 115px;
+            margin-top: -5px;
+        }
+
+        @media screen and (max-width: 900px){
+            #fridges{
+                width: 366px;
+                height: 620px;
+                padding-top: 30px;
+            }
+            .form-text{
+                align-items: center;
+                padding-top: 150px;
+                font-size: 20px;
+                
+            }
+
+        }
+
+        @media screen and (max-width: 1130px){
+            .form-text{
+                font-size: 22px;
+            }
+
+        }
+
+        @media screen and (max-width: 800px){
+            #fridges{
+                width: 296px;
+                height: 600px;
+                padding-top: 50px;
+                margin-left : -5px;
+                padding-right: 0px;
+            }
+            .form-text{
+                align-items: center;
+                padding-top: 170px;
+                font-size: 18px;
+                padding-right: 5px;
+            }
+        }
+        
+    </style>
+    <body>
+        <div class="image-form-container">
+            <form id = "form" action="{{ url_for("dell")}}" method="post" >
+                <input type="image" src="https://o.remove.bg/downloads/151565cd-7423-4519-9b93-29546643fbbd/the-3-removebg-preview.png" 
+                name="saveForm" class="btTxt submit" id="fridges"/>
+            </form>
+            <div class="form-text">
+                <form id = "form" action="{{ url_for("gfg")}}" method="post" >
+                    <h1 id = "titl">Random Food Generator</h1>
+                    <label for="fridge">Enter the items in your refrigerator with spaces in between:</label>
+                    <input type="text" id="fridge" name="inventory" placeholder="Enter food items">
+                    <div id = "cont" class="container">
+                        <button id = "btn" type="submit" onclick = "call(changeImage())">Submit</button>
+                    </div>
+                </form>
+                <p id= "fridge_items">Items in your fridge: {{  inv }}</p>
+                <p id = "randomizer">{{ final }}</p>
+                
+             <!--  <img id = "final_pic" src={{ source }} > --> 
+            </div>
+        </div>
+
+       
+        
+
+    </body>
+</html>
